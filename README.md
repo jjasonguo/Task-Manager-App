@@ -32,7 +32,7 @@ A simplistic and intuitive task management application built with React Native a
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
+git clone ssh of this repository
 cd task_manager_app
 ```
 
