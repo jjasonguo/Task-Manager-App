@@ -1,50 +1,91 @@
-# Welcome to your Expo app 👋
+# Task Manager App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simplistic and intuitive task management application built with React Native and Expo, with the additional point based reward system and digital garden (only one plant as of now, as proof of concept).
 
-## Get started
+## Features
 
-1. Install dependencies
+### Task Management
+- Create new tasks with title, description, priority level, and due date
+- Mark tasks as complete/incomplete by clicking on the circle
+- Delete tasks by swiping to the left
+- Tasks are colored (green, yellow, red) based on set priority
+- Sort tasks by priority or date
+- Completed vs Incomplete tasks are separated
 
-   ```bash
-   npm install
-   ```
+### Calendar View
+- Color-coded task indicator bubbles based on priority below each date
+- Add task and view tasks directly from calendar view by clicking on the date
 
-2. Start the app
+### Profile & Rewards
+- Points system for completing tasks (+1 for each task)
+- Plant that "evolves" as you reach point checkmarks
+- Statistics that track task completion rate and number
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+### Prerequisites
+- Node.js
+- npm or yarn
+- iOS Simulator or Android Emulator (optional)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone [your-repo-url]
+cd task_manager_app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Follow the Expo CLI instructions to run on your desired platform (iOS, Android, or Web)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Third-Party Libraries
 
-## Join the community
+- **react-native-calendars**: Powers the calendar view with task indicators
+- **@react-native-community/datetimepicker**: Provides date selection in task creation
 
-Join our community of developers creating universal apps.
+## Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+task_manager_app/
+├── app/
+│   ├── components/    # Reusable components
+│   ├── context/       # Task context and state management
+│   ├── screens/       # Main screen components
+│   ├── types/         # TypeScript type definitions
+│   └── _layout.tsx    # Root layout with tab navigation
+├── assets/           # Images and fonts
+└── package.json      # Dependencies and scripts
+```
+
+## Next Steps
+
+Several potential improvements could enhance the app's functionality:
+
+### Data Persistence
+- Implement AsyncStorage for local data persistence
+- Add a backend database (e.g., Firebase, MongoDB) for cloud storage
+- Enable data sync across devices
+
+### Authentication
+- Add user authentication system
+- Implement social login options
+
+### Future Features
+- Push notifications for task reminders
+- Recurring tasks
+- Expanded garden/reward system with multiple plants
+
